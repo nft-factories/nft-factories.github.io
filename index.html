@@ -9,22 +9,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
   <style media="screen">
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
     body {
-      font-family: Titillium Web;
+      font: 30px "Titillium Web", Verdana, sans-serif;
+      color: white;
+      text-align: center;
     }
     body > div {
       width: 100vw;
       height: 100vh;
-      background-image: url("background.png");
+      background: center top url("background.png");
+      padding: 5vw 5vh;
+    }
+    body > div > div.img > img {
+      margin-top: 5vh;
+      width: 80vw;
+      max-width: 600px;
+    }
+    body > div > div.text {
+      margin-top: 25vh;
     }
   </style>
 </head>
 <body>
   <div>
-    <img src="logo.png" alt="NFT Factories Logo" class="logo">
-    <h1>Coming soon...</h1>
-    <p>Our website is not ready yet, we are going to release it in a week or two.
-      But thank you for your interest, you won't be dissapointed!</p>
+    <div class="img">
+      <img src="logo.png" alt="NFT Factories Logo" class="logo">
+    </div>
+    <div class="text">
+      <h1>Coming soon...</h1>
+      <p>Our website is not ready yet, we are going to release it in a week or two.</p>
+      <p>But thank you for your interest, you won't be dissapointed!</p>
+    </div>
   </div>
 </body>
 </html>
