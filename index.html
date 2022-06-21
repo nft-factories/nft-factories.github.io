@@ -4,47 +4,164 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>NFT Factories</title>
+  <script src="https://kit.fontawesome.com/d53063d551.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <style media="screen">
     * {
-      box-sizing: border-box;
-      margin: 0px;
-      padding: 0px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
     }
+
     body {
-      font: 30px "Titillium Web", Verdana, sans-serif;
-      color: white;
-      text-align: center;
+      background: center top url('background.jpg');
+      font: 18px "Archivo", serif;
     }
-    body > div {
+
+    header {
+      position: absolute;
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 25px 125px;
+      color: white;
+    }
+    header > div {
+      flex: 1;
+      display: flex;
+    }
+    header > div.left {
+      justify-content: flex-start;
+    }
+    header > div.center {
+      justify-content: center;
+    }
+    header > div.right {
+      justify-content: flex-end;
+    }
+    a {
+      margin: 0 25px;
+      cursor: pointer;
+      transition: color 0.25s;
+      text-decoration: none;
+      color: white;
+    }
+    a:hover {
+      color: #FF8400;
+    }
+    a > i {
+      font-size: 25px;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100vw;
       height: 100vh;
-      background: center top url("background.jpeg");
-      padding: 5vw 5vh;
+      --animate-delay: 0.3s;
+      background-color: rgba(0, 0, 0, 0.05);
+      transition: background-color 0.75s;
+      pointer-events: none;
     }
-    body > div > div.img > img {
-      margin-top: 5vh;
-      width: 80vw;
-      max-width: 600px;
+    main:hover {
+      background-color: rgba(0, 0, 0, 0.4);
     }
-    body > div > div.text {
-      margin-top: 25vh;
+    main > div {
+      text-align: center;
+      pointer-events: auto;
+      cursor: default;
+    }
+    h1 {
+      display: block;
+      color: white;
+      font-family: 'Archivo';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 128px;
+      line-height: 139px;
+      /* Shadow Text */
+      background: linear-gradient(268.25deg, #9747FF 4.79%, #FF8400 46.54%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+      margin-bottom: 35px;
+    }
+    p {
+      /* Title/H3 */
+      font-family: 'Archivo';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 35px;
+      text-align: center;
+
+      /* Text / White */
+      color: #FFFFFF;
+    }
+    @media (max-width: 1200px) {
+      main {
+        padding: 0 25px;
+      }
+      header {
+        padding: 25px 50px;
+      }
+      a {
+        margin: 0 10px;
+      }
+    }
+    @media (max-width: 780px) {
+      header {
+        flex-wrap: wrap;
+      }
+      header > div {
+        margin-bottom: 25px;
+        justify-content: center !important;
+      }
+      a {
+        margin: 0 10px;
+      }
+      h1 {
+        font-size: 64px;
+        line-height: 80px;
+      }
+      p {
+        font-size: 16px;
+      }
     }
   </style>
+  <title>NFT Factories</title>
 </head>
 <body>
-  <div>
-    <div class="img">
-      <img src="logo.png" alt="NFT Factories Logo" class="logo">
+  <header class="animate__animated animate__fadeInDown">
+    <div class="left"><a href='javascript:window.location.reload(true)'>NFT•Factories</a></div>
+    <div class="center">
+      <a href='javascript:window.location.reload(true)'>Roadmap</a>
+      <a href='javascript:window.location.reload(true)'>Overview</a>
+      <a href='javascript:window.location.reload(true)'>Metadata</a>
     </div>
-    <div class="text">
-      <h1>Coming soon...</h1>
-      <p>Our website is not ready yet, we are going to release it in a week or two.</p>
-      <p>But thank you for your interest, you won't be dissapointed!</p>
+    <div class="right">
+      <a href='https://twitter.com/nftfactories'><i class="fa-brands fa-twitter"></i></a>
+      <a href='#'><i class="fa-brands fa-discord"></i></a>
+      <a href='https://t.me/nftfactories'><i class="fa-brands fa-telegram"></i></a>
     </div>
-  </div>
+  </header>
+  <main class="animate__animated animate__fadeIn animate__delay-2s">
+    <div>
+      <h1>Coming soon</h1>
+      <p>We are going to release the website in a week or two.<br>
+  Thank you for being interested, you are definitely gonna like it!</p>
+    </div>
+  </main>
 </body>
 </html>
